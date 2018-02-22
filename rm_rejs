@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find . -name \*.rej -delete
+find . -name \*.porig -delete
