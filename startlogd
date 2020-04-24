@@ -1,0 +1,8 @@
+#!/bin/bash
+adb wait-for-device root
+adb wait-for-device
+adb shell setprop persist.logd.logpersistd.size 1024
+adb shell setprop persist.logd.logpersistd logcatd
+sleep 1
+adb shell ls data/misc/logd
+

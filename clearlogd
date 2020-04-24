@@ -1,0 +1,10 @@
+#!/bin/bash
+adb wait-for-device root
+adb wait-for-device
+adb shell setprop logd.logpersistd clear
+adb shell rm -rf data/system/dropbox/*
+adb shell rm -rf data/tombstones/*
+sleep 1 
+adb shell ls data/misc/logd
+adb logcat -c
+

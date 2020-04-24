@@ -1,0 +1,8 @@
+#!/bin/bash
+adb wait-for-device root
+adb wait-for-device
+adb pull data/misc/logd
+#adb pull data/system/dropbox
+#adb pull data/tombstones
+cd logd
+
